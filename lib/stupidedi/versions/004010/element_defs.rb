@@ -290,6 +290,7 @@ module Stupidedi
         E87   = t::AN.new(:E87  , "Marks and Numbers"                    , 1, 48)
         E88   = t::ID.new(:E88  , "Marks and Numbers Qualifier"          , 1, 2,
           s::CodeList.build(
+            "CP" => "Tracking number",
             "UP" => "U.P.C. Consumer Package Code (1-5-5-1)",
             "GM" => "SSCC-18 and Application Identifier"))
         E90   = t:: R.new(:E90  , "Height"                               , 1, 8)
@@ -4058,6 +4059,7 @@ module Stupidedi
             "ND" => "National Drug Code (NDC)",
             "NU" => "National Uniform Billing Committee (NUBC) UB92 Codes",
             "RB" => "National Uniform Billing Committee (NUBC) UB82 Codes",
+            "SK" => "Buyer's SKU",
             "UK" => "UPC/EAN Shipping Container Code",
             "UP" => "UPC Consumer Packaging Code",
             "VN" => "Vendor's (Seller's) Item Number",
@@ -5412,10 +5414,12 @@ module Stupidedi
         E628  = t::AN.new(:E628 , "Hierachical ID Number"                , 1, 12)
         E639  = t::ID.new(:E639 , "Basis of Unit Price Code"             , 2, 2,
           s::CodeList.build(
+            "FX" => "Fixed Price",
+            "PC" => "Price per Case",
             "PE" => "Price per Each",
             "PP" => "Price per Pound",
+            "TE" => "Contract Per Each",
             "UM" => "Price per Unit of Measure",
-            "PC" => "Price per Case",
             "ZZ" => "Mutually Defined"))
         E640  = t::ID.new(:E640 , "Transaction Type Code"                , 2, 2,
           s::CodeList.build(

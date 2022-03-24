@@ -16,12 +16,16 @@ module Stupidedi
             s::REF.use( 50, r::Optional,  d::RepeatCount.unbounded),
             s::PER.use( 60, r::Optional,  d::RepeatCount.bounded(3)),
             s::DTM.use(150, r::Optional,  d::RepeatCount.bounded(10)),
+            s::TD5.use(240, r::Optional, d::RepeatCount.bounded(12)),
+            s::N9.use(295, r::Optional, d::RepeatCount.bounded(1)),
 
             d::LoopDef.build("N1", d::RepeatCount.bounded(200),
               s:: N1.use( 310, r::Optional,  d::RepeatCount.bounded(1)),
+              s:: N2.use( 320, r::Optional,  d::RepeatCount.bounded(2)),
               s:: N3.use( 330, r::Optional,  d::RepeatCount.bounded(2)),
               s:: N4.use( 340, r::Optional,  d::RepeatCount.unbounded),
-              s::REF.use( 350, r::Optional,  d::RepeatCount.bounded(12)))),
+              s::REF.use( 350, r::Optional,  d::RepeatCount.bounded(12)),
+              s::PER.use( 360, r::Optional,  d::RepeatCount.bounded(12)))),
 
           d::TableDef.detail("2 - Detail",
             d::LoopDef.build("PO1", d::RepeatCount.bounded(10000),
